@@ -1,0 +1,103 @@
+body
+        {
+            margin: 0;
+            padding: 0;
+            border: 5;
+            overflow: hidden;
+            height: 100%;
+            max-height: 100%;
+            background: url('/img/wood.jpg');
+        }
+ 
+
+
+        #frameTop
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+ 
+        #frameContentLeft
+        {
+            position: relative;
+            float:left;
+            top: 100px;
+            height: 100%;
+            width: 33.3%;
+            overflow: hidden;
+            vertical-align: top;
+            
+        }
+
+        #frameContentMiddle
+        {
+            position: relative;
+            float:right;
+            top: 100px;
+            height: 100%;
+            width: 33.3%;
+            overflow: hidden;
+            vertical-align: top;
+            
+        }
+ 
+        #frameContentRight
+        {
+            position: relative;
+            float:right;
+            top: 100px;
+            height: 100%;
+            width: 33.3%;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            
+        }
+        
+        .Top{
+          text-align: center;
+          display: inline-block;
+        }
+        
+        .L, .M, .R{
+          right: 30;
+          text-align: center;
+          
+        }
+
+        li{
+          width: 100%;
+          float:left;
+          text-align: center;
+        }
+
+        ul{
+          list-style: none;
+        }
+
+        h1 {
+            font-family: KaiTi_GB2312;
+        }
+
+        h1 p {
+            font-family: FangSong;
+        }
+
+        p{
+            font-family: FangSong;
+        }
+
+        .floati{
+            position: relative;
+            float:right;
+            
+        }
+
+        p{
+          font-family: FangSong;
+        }

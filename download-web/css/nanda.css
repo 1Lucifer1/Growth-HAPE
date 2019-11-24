@@ -1,0 +1,171 @@
+
+#body {
+    background:white url('/img/wood.jpg');
+}
+#top-panel {
+    background-color: #1D011B;
+    height: 39px;
+}
+
+#logo-panel {
+    display: table;
+    padding: 6px 0px 6px 12px;
+    background-color: white url('./img/title.jpg');
+}
+
+.li-i a{
+    position: relative;
+    top: 7.5px;
+    left: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #cdbccc;
+}
+
+
+.top-panel-son-1 {
+    vertical-align: middle;
+    width: 33.3%;
+    height: 39px;
+    float: left;
+    margin-left: 12px;
+}
+
+.top-panel-son-2 {
+    vertical-align: middle;
+    width: 33.3%;
+    height: 39px;
+    float: right;
+    margin-right: 12px;
+}
+
+.banner-son {
+    margin: 0 3% 0 5%;
+}
+
+#top-panel .top-panel-son-1 .li-item {
+    float: left;
+}
+
+#top-panel .top-panel-son-2 .li-item {
+    float: right;
+}
+
+#top-panel .top-panel-son-1 .li-item .li-link{
+    display: inline-block;
+    margin: 0px 6px 0px 6px;
+    height: 39px;
+    line-height: 39px;
+    color: #cdbccc;
+    font-size: 12px;
+    text-decoration: none initial initial;
+}
+
+#top-panel .top-panel-son-2 .li-item .li-link{
+    display: inline-block;
+    margin: 0px 6px 0px 6px;
+    height: 39px;
+    line-height: 39px;
+    color: #cdbccc;
+    font-size: 12px;
+    text-decoration: none initial initial;
+}
+
+.nju-logo {
+    vertical-align: middle;
+    width: 30%;
+}
+
+.search-logo {
+    vertical-align: middle;
+    width: 70%;
+}
+
+#logo-panel div {
+    display: inline-block;
+}
+
+.search-1, .search-2 {
+    float: right;
+    vertical-align: middle;
+}
+
+.search-1 img {
+    width: 50%;
+    height: 45px;
+    float: right;
+}
+
+.search-2 img {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 30%;
+    height: 30px;
+    float: left;
+}
+
+.more-jpg {
+    display: block; 
+    float: left; 
+    position: relative; 
+    top: 150px; 
+    border: thick solid gray;
+}
+
+.clearfix ::after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul {
+    list-style: none;
+}
+
+
+* {box-sizing: border-box;}
+
+.row .col {
+
+  float: left;
+
+  width: 25%;
+
+  border: 10px;
+
+}
+
+p {
+    font-family: FangSong;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}

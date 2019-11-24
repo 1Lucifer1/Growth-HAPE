@@ -1,0 +1,60 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.timetable"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:5:5-25:19
+12        android:name="com.example.timetable.font"
+12-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:6:9-29
+13        android:allowBackup="true"
+13-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:7:9-35
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.0.1] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\c0a39027978b83a483a047f5c31d0c4e\core-1.0.1\AndroidManifest.xml:22:18-86
+15        android:debuggable="true"
+16        android:icon="@mipmap/girl7"
+16-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:8:9-37
+17        android:label="Growth"
+17-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:9:9-31
+18        android:roundIcon="@mipmap/girl7"
+18-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:10:9-42
+19        android:supportsRtl="true"
+19-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:11:9-35
+20        android:theme="@style/AppTheme" >
+20-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:12:9-40
+21        <activity android:name="com.example.timetable.Choose_pet" />
+21-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:9-48
+21-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:19-45
+22        <activity android:name="com.example.timetable.Activity_Dialog" />
+22-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:9-62
+22-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:19-50
+23        <activity android:name="com.example.timetable.MainView" />
+23-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:15:9-46
+23-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:15:19-43
+24        <activity
+24-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:16:9-24:20
+25            android:name="com.example.timetable.Start"
+25-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:17:13-34
+26            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+26-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:18:13-77
+27            <intent-filter>
+27-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:19:13-23:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:20:17-69
+28-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:20:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:22:17-77
+30-->E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:22:27-74
+31            </intent-filter>
+32        </activity>
+33    </application>
+34
+35</manifest>
