@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\ca3ed72cfdc57fc3a102e462c0327875\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\906744c4ddcbc384c5a8d2d69414f8fa\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -32,25 +32,25 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\86188\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\df65787e67fe4b4bc0635deed9695797\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\a1f5477cd6fd5fad9baa3e263bec7d60\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\60b50828def4ba3859898ffb4c971c21\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:5:5-25:19
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.0.1] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\c0a39027978b83a483a047f5c31d0c4e\core-1.0.1\AndroidManifest.xml:22:5-89
@@ -60,47 +60,45 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\86
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\86188\.gradle\caches\transforms-2\files-2.1\c0a39027978b83a483a047f5c31d0c4e\core-1.0.1\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:9:9-31
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:8:9-29
 	android:roundIcon
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:10:9-42
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:9:9-45
 	android:icon
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:8:9-37
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:7:9-40
 	android:allowBackup
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:12:9-40
-	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:6:9-29
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.timetable.Choose_pet
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:9-48
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:12:9-48
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:19-45
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:12:19-45
 activity#com.example.timetable.Activity_Dialog
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:9-62
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:9-62
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:13:19-50
 activity#com.example.timetable.MainView
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:15:9-46
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:9-46
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:15:19-43
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:14:19-43
 activity#com.example.timetable.Start
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:15:9-23:20
 	android:theme
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:18:13-77
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:17:13-77
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:17:13-34
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:16:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
 INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\ANDROID\timeTable\app\src\main\AndroidManifest.xml

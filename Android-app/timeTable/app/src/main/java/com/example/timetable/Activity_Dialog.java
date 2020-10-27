@@ -11,9 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -26,36 +24,20 @@ public class Activity_Dialog extends Activity {
     private boolean rb_o = false;
     private String time;
     Intent intent = new Intent();
-    TextView timeShown;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_task2);
-        //编辑显示时间
+
+
         editText1 = (EditText) findViewById(R.id.text_name);
-        timeShown=(TextView) findViewById(R.id.default_time);
-        if (MainView.editedTaskStatus){
-            timeShown.setText(MainView.editedTaskTime);
-            editText1.setText(MainView.editedTaskName);
-        }else {
-            timeShown.setText("Task Time");
-            editText1.setHint("Task Name");
-        }
-        //
-
-
         rg = (RadioGroup) findViewById(R.id.rg_sex);
         rb_learn = (RadioButton) findViewById(R.id.rb_learn);
         rb_other = (RadioButton) findViewById(R.id.rb_other);
         rg.setOnCheckedChangeListener(new MyRadioButtonListener());
-        TextView textTime=(TextView)findViewById(R.id.default_time);
-        textTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Activity_Dialog.this,"设置时间 请点左边按钮哦",Toast.LENGTH_SHORT).show();
-            }
-        });
+
         Button btnDone = (Button) findViewById(R.id.done_button);
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,11 +50,7 @@ public class Activity_Dialog extends Activity {
                     setResult(RESULT_OK, intent);
                     intent.putExtra("task_name",task_name);
                     setResult(RESULT_OK, intent);
-                    if (MainView.editedTaskStatus){
-                        intent.putExtra("time",MainView.editedTaskTime);
-                    }else {
-                        intent.putExtra("time","00:00");
-                    }
+                    intent.putExtra("time","          ");
                     setResult(RESULT_OK, intent);
                     finish();  //ca.get(Calendar.HOUR)+":"+ca.get(Calendar.MINUTE)
                 }else if ((rb_o!=false||rb_l!=false)&&time==null){
@@ -84,11 +62,7 @@ public class Activity_Dialog extends Activity {
                     setResult(RESULT_OK, intent);
                     intent.putExtra("task_name",task_name);
                     setResult(RESULT_OK, intent);
-                    if (MainView.editedTaskStatus){
-                        intent.putExtra("time",MainView.editedTaskTime);
-                    }else {
-                        intent.putExtra("time","00:00");
-                    }
+                    intent.putExtra("time","          ");
                     setResult(RESULT_OK, intent);
                     finish();  //ca.get(Calendar.HOUR)+":"+ca.get(Calendar.MINUTE)
                 } else if((rb_o==false&&rb_l==false)&&time!=null){
@@ -132,7 +106,7 @@ public class Activity_Dialog extends Activity {
                         } else {
                             time = String.valueOf(hour) + ":" + String.valueOf(minute);
                         }
-                        timeShown.setText(time);
+
                     }
                 }, 0, 0, true).show();
             }

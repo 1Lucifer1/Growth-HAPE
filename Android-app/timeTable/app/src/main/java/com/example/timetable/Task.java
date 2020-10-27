@@ -1,6 +1,7 @@
 package com.example.timetable;
 class Task {
-    private int taskId;
+    private static Long taskCount = 0L;
+    private Long taskId;
     private String taskName;
     private String taskTime;//00:00
     private int imageId;//int
@@ -10,34 +11,11 @@ class Task {
     public Task(String taskName,String taskTime){
         this.taskName=taskName;
         this.taskTime=taskTime;
-        this.imageId=0;
-    }
-    public Task(int taskId, String taskName, String taskTime, int imageId, boolean done, boolean repeat){
-        this.taskId = taskId;
-        this.taskName = taskName;
-        this.done = done;
-        this.repeat = repeat;
-        this.taskTime =taskTime;
-        this.imageId = imageId;
-        this.timeInt=getTimeInt();
-    }
-    public int getTimeInt(){
-        if (taskTime.equals("          ")){
-            return -1;
-        }
-        String temp;
-        temp=taskTime.replace(":","");
-        if (temp.equals("0000"))return 0;
-        while (temp.startsWith("0")){
-            temp=temp.substring(1);
-        }
-        return Integer.valueOf(temp);
-    }
-    public void setTaskId(int taskId) {
-        this.taskId = taskId;
+        taskId = taskCount;
+        taskCount++;
     }
 
-    public int getTaskId(){
+    public Long getTaskId(){
         return taskId;
     }
 

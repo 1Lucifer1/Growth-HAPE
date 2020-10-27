@@ -3,11 +3,10 @@
     package="com.example.timetable">
 
     <application
-        android:name=".font"
         android:allowBackup="true"
-        android:icon="@mipmap/girl7"
-        android:label="Growth"
-        android:roundIcon="@mipmap/girl7"
+        android:icon="@mipmap/pet_cm03"
+        android:label="HAPE"
+        android:roundIcon="@mipmap/pet_cm03"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Choose_pet" />

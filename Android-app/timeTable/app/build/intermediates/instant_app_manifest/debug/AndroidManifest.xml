@@ -10,14 +10,14 @@
         android:targetSdkVersion="29" />
 
     <application
-        android:name="com.example.timetable.font"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/girl7"
-        android:label="Growth"
-        android:roundIcon="@mipmap/girl7"
+        android:icon="@mipmap/pet_cm03"
+        android:label="HAPE"
+        android:roundIcon="@mipmap/pet_cm03"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.timetable.Choose_pet" />
         <activity android:name="com.example.timetable.Activity_Dialog" />
