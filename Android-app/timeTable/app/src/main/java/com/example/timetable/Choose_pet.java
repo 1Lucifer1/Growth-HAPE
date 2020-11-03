@@ -37,12 +37,12 @@ public class Choose_pet extends Activity {
         recyclerView.setAdapter(adapter);
     }
     public void initPets(){
-        Pet straberry=new Pet("草莓",0,R.mipmap.pet_cm03);
-        Pet watermelon=new Pet("西瓜",1,R.mipmap.pet14);
-        Pet tomato=new Pet("番茄",2,R.mipmap.pet24);
-        Pet yumi=new Pet("玉米",3,R.mipmap.pet34);
-        Pet baihe=new Pet("百合",4,R.mipmap.pet45);
-        Pet yujinxiang=new Pet("郁金香",5,R.mipmap.pet55);
+        Pet straberry=new Pet("草莓",0,R.mipmap.pet_cm00);
+        Pet watermelon=new Pet("西瓜",1,R.mipmap.pet10);
+        Pet tomato=new Pet("番茄",2,R.mipmap.pet20);
+        Pet yumi=new Pet("玉米",3,R.mipmap.pet30);
+        Pet baihe=new Pet("百合",4,R.mipmap.pet40);
+        Pet yujinxiang=new Pet("郁金香",5,R.mipmap.pet50);
         pets.add(straberry);
         pets.add(watermelon);
         pets.add(tomato);

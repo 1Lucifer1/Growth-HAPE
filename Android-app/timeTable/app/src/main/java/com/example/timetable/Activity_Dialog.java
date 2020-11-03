@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
@@ -24,15 +25,23 @@ public class Activity_Dialog extends Activity {
     private boolean rb_o = false;
     private String time;
     Intent intent = new Intent();
-
+    TextView timeShown;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_task2);
-
-
+        //编辑显示时间
         editText1 = (EditText) findViewById(R.id.text_name);
+        timeShown=(TextView) findViewById(R.id.default_time);
+        if (MainView.editedTaskStatus){
+            MainView.editedTaskStatus=false;
+            timeShown.setText(MainView.editedTaskTime);
+            editText1.setText(MainView.editedTaskName);
+        }
+        //
+
+
         rg = (RadioGroup) findViewById(R.id.rg_sex);
         rb_learn = (RadioButton) findViewById(R.id.rb_learn);
         rb_other = (RadioButton) findViewById(R.id.rb_other);
@@ -106,7 +115,7 @@ public class Activity_Dialog extends Activity {
                         } else {
                             time = String.valueOf(hour) + ":" + String.valueOf(minute);
                         }
-
+                        timeShown.setText(time);
                     }
                 }, 0, 0, true).show();
             }

@@ -1,4 +1,4 @@
-#Sat Nov 23 16:16:40 CST 2019
-base.0=E\:\\ANDROID\\timeTable\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed Oct 28 13:34:54 CST 2020
+base.0=D\:\\Android File\\timeTable\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

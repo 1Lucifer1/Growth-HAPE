@@ -57,12 +57,18 @@ public class MainView extends Activity {
     private TaskAdapter adapter;
     private ListView listView;
     private ImageView petView;
-    private ImageView petView2;
+    private int girlCheck = 0;
+    private ImageView girlView;
     private SoundPool soundPool;
     private Dialog dialog;
     static boolean statusChanged=false;
+    static String editedTaskTime;
+    static String editedTaskName;
+    static boolean editedTaskStatus=false;
+    private long petClick=0;
     public static int petType=3;
     TaskDataBase dataBase;
+    private int[]girlImage=new int[5];
     private int[][]petImage=new int[6][5];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +77,8 @@ public class MainView extends Activity {
         //
         dataBase=TaskDataBase.getTaskDataBase(this);
         taskList=dataBase.getTaskList();
+//        dataBase.getTaskList();
+
         //下面设置顶部状态栏透明
         if(Build.VERSION.SDK_INT >= 21) {//版本5.0以上支持
             View decorView =getWindow().getDecorView();
@@ -81,11 +89,12 @@ public class MainView extends Activity {
         Toast.makeText(getApplicationContext(),"welcome!",Toast.LENGTH_SHORT).show();
         setContentView(R.layout.main_view);
         petView=(ImageView)findViewById(R.id.桌宠);
-        petView2=(ImageView)findViewById(R.id.桌宠2);
         petView.setImageResource(R.mipmap.pet31);
-        petView2.setImageResource(R.mipmap.pet31);
 //        initTasks();
         initPetImage();
+        girlView=(ImageView)findViewById(R.id.girl);
+        girlView.setImageResource(R.mipmap.girl1);
+        initGirlImage();
         soundPool=new SoundPool(10, AudioManager.STREAM_SYSTEM,5);
         initSuccessSound();
         click_soundEffect=soundPool.load(MainView.this,R.raw.m_click,0);
@@ -113,6 +122,8 @@ public class MainView extends Activity {
                             exp++;
                             task.setDone(true);
                             task.setImageId(R.mipmap.icon_yes);
+                            taskList=dataBase.update(task);
+//                           dataBase.update(task);
                             //弹窗显示
                             dialog = new Dialog(MainView.this, R.style.MyDialog);
                             LayoutInflater inflater = (LayoutInflater) MainView.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -126,6 +137,7 @@ public class MainView extends Activity {
                                 }
                             }, 500);
                             petCheck();
+                            girlCheck();
                             adapter=new TaskAdapter(MainView.this, R.layout.task_item, taskList);
                             listView.setAdapter(adapter);
                         }
@@ -147,16 +159,25 @@ public class MainView extends Activity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Task task=taskList.get(position);
+                        //
+                       editedTaskTime=task.getTaskTime();
+                       editedTaskName=task.getTaskName();
+                       editedTaskStatus=true;
+//                        TextView t = (TextView)findViewById(R.id.default_time);
+//                        t.setText(task.getTaskTime());
+                        //
                         Intent intent=new Intent(MainView.this,Activity_Dialog.class);
                         startActivityForResult(intent,1);
                         missionEditedPosition=position;
                         mission_edited=true;
                     }
                 });
-                builder.setNegativeButton("delete", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("删除", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        taskList.remove(position);
+//                        taskList.remove(position);
+                        taskList=dataBase.delete(taskList.get(position));
+//                        dataBase.delete(taskList.get(position));
                         getTaskList();
                     }
                 });
@@ -165,41 +186,51 @@ public class MainView extends Activity {
             }
         } );
 
+        girlView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (exp<15) {
+                    //不要碰我QAQ
+                    girlView.setImageResource(R.mipmap.girl5);
+                    try {
+                        Thread.sleep(2000);
+                        girlView.setImageResource(R.mipmap.girl3);
+                    }catch (Exception e){}
+
+//                    Timer timer = new Timer();
+//                    timer.schedule(new TimerTask() {
+//                        @Override
+//                        public void run() {
+//                            Log.d("","");
+//                        }
+//                    }, 1000);
+//                    girlView.setImageResource(girlImage[girlCheck]);
+                }else{
+                    girlView.setImageResource(girlImage[5]);
+                    Timer timer = new Timer();
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            Log.d("","");
+                        }
+                    }, 500);
+                    girlView.setImageResource(girlImage[girlCheck]);
+                }
+            }
+        });
 
         petView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 soundPool.play(click_soundEffect,1,1,0,0, (float) 1.5);
-                if (firstClickTime>0){
-                    long secondClickTIme=SystemClock.uptimeMillis();
-                    if (secondClickTIme-firstClickTime<1500){
-                        //双击事件
+                petClick++;
+                if (petClick%2==0){
                         Intent intent=new Intent(MainView.this,Choose_pet.class);
                         startActivity(intent);
-                        //双击事件结束
                     }
-                    firstClickTime=0;//归零
-                }else {
-                    firstClickTime=SystemClock.uptimeMillis();
-                }
-            }
-        });
+                else {
 
-        petView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                soundPool.play(click_soundEffect,1,1,0,0, (float) 1.5);
-                if (firstClickTime>0){
-                    long secondClickTIme=SystemClock.uptimeMillis();
-                    if (secondClickTIme-firstClickTime<1500){
-                        //双击事件
-                        Intent intent=new Intent(MainView.this,Choose_pet.class);
-                        startActivity(intent);
-                        //双击事件结束
-                    }
-                    firstClickTime=0;//归零
-                }else {
-                    firstClickTime=SystemClock.uptimeMillis();
                 }
             }
         });
@@ -247,6 +278,11 @@ public class MainView extends Activity {
             }
         });
         //
+        // 下面设置顶部日期
+        Calendar c = Calendar.getInstance();
+        TextView textView = (TextView) findViewById(R.id.顶部日期);
+        textView.setText((c.get(Calendar.MONTH)+1+"月"+c.get(Calendar.DATE)+"日"));
+        //
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -263,7 +299,10 @@ public class MainView extends Activity {
                     Task task=new Task(returnData1,returnData3);
                     if (mission_edited){
                         //如果是编辑，那么直接修改
-                        taskList.set(missionEditedPosition,task);
+                        taskList.get(missionEditedPosition).setTaskTime(returnData3);
+                        taskList.get(missionEditedPosition).setTaskName(returnData1);
+                        taskList=dataBase.update(taskList.get(missionEditedPosition));
+//                        dataBase.update(taskList.get(missionEditedPosition));
                         //归零
                         mission_edited=false;
 
@@ -282,8 +321,9 @@ public class MainView extends Activity {
         }
     }
     private void addTasks(Task task){
-        //taskList.add(task);
+//        taskList.add(task);
         taskList=dataBase.create(task);
+//        taskList=dataBase.create(task);
     }
 
     public void initSuccessSound(){
@@ -296,6 +336,13 @@ public class MainView extends Activity {
         adapter = new TaskAdapter(MainView.this, R.layout.task_item, taskList);
         listView=(ListView)findViewById(R.id.任务列表);
         listView.setAdapter(adapter);}
+    public void initGirlImage(){
+        girlImage[0]=R.mipmap.girl1;
+        girlImage[1]=R.mipmap.girl2;
+        girlImage[2]=R.mipmap.girl3;
+        girlImage[3]=R.mipmap.girl4;
+        girlImage[4]=R.mipmap.girl5;
+    }
     public void initPetImage(){
         //0草莓  1西瓜  2番茄  3玉米   4百合 5郁金香  6铃兰
         petImage[0][0]=R.mipmap.pet_cm01;
@@ -329,18 +376,34 @@ public class MainView extends Activity {
         petImage[5][3]=R.mipmap.pet54;
         petImage[5][4]=R.mipmap.pet55;
     }
+    public void girlCheck(){
+        if(exp<5){
+            girlView.setImageResource(girlImage[girlCheck]);
+        }else if(exp>=5&&exp<10){
+            girlCheck =1;
+            girlView.setImageResource(girlImage[girlCheck]);
+        }else if (exp>=10&&exp<15){
+            girlCheck =2;
+            girlView.setImageResource(girlImage[girlCheck]);
+        }else if (exp>15&&exp<20){
+            girlCheck =3;
+            girlView.setImageResource(girlImage[girlCheck]);
+        }else{
+            girlCheck =4;
+            girlView.setImageResource(girlImage[girlCheck]);
+        }
+    }
     public void petCheck(){
         switch (petType){
             case 0:
                 if (exp<=3){
                     petView.setImageResource(petImage[petType][0]);
-                    petView2.setImageResource(petImage[petType][0]);
+
                 }else if (exp<=5){
                     petView.setImageResource(petImage[petType][1]);
-                    petView2.setImageResource(petImage[petType][1]);
+
                 }else if (exp<=7){
                     petView.setImageResource(petImage[petType][2]);
-                    petView2.setImageResource(petImage[petType][2]);
                 }
                 break;
             case 1:
@@ -348,40 +411,30 @@ public class MainView extends Activity {
             case 3:
                 if (exp<=3){
                     petView.setImageResource(petImage[petType][0]);
-                    petView2.setImageResource(petImage[petType][0]);
                 }else if (exp<=5){
-                    petView2.setImageResource(petImage[petType][1]);
                     petView.setImageResource(petImage[petType][1]);
                 }else if (exp<=7){
                     petView.setImageResource(petImage[petType][2]);
-                    petView2.setImageResource(petImage[petType][2]);
                 }else if (exp<=8){
                     petView.setImageResource(petImage[petType][3]);
-                    petView2.setImageResource(petImage[petType][3]);
                 }
                 break;
             case 4:
             case 5:
                 if (exp<=3){
                     petView.setImageResource(petImage[petType][0]);
-                    petView2.setImageResource(petImage[petType][0]);
                 }else if (exp<=5){
                     petView.setImageResource(petImage[petType][1]);
-                    petView2.setImageResource(petImage[petType][1]);
                 }else if (exp<=7){
-                    petView2.setImageResource(petImage[petType][2]);
                     petView.setImageResource(petImage[petType][2]);
                 }else if (exp<=8){
-                    petView2.setImageResource(petImage[petType][3]);
                     petView.setImageResource(petImage[petType][3]);
                 }else if (exp<=9){
-                    petView2.setImageResource(petImage[petType][4]);
                     petView.setImageResource(petImage[petType][4]);
                 }
                 break;
         }
     }
-
 
     @Override
     protected void onResume() {

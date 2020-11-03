@@ -9,6 +9,7 @@
         android:targetSdkVersion="29" />
 
     <application
+        android:name="com.example.timetable.font"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"

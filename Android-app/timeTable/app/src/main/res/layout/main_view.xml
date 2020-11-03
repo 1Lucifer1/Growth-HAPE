@@ -7,47 +7,57 @@
     android:fitsSystemWindows="true">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/桌宠"
-        android:clickable="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:focusableInTouchMode="false"
-        android:layout_margin="15dp"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/桌宠2"
-        android:clickable="true"
-        android:layout_toRightOf="@id/桌宠"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:focusableInTouchMode="false"/>
-    <ListView
-        android:id="@+id/任务列表"
-        android:layout_marginTop="47dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="120dp"
-        />
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="10mm"
-        android:layout_height="10mm"
-        android:layout_toLeftOf="@id/Bottom_Right"
-        android:layout_above="@id/Bottom_Right"
-        android:background="@mipmap/add_button" />
-    <TextView
-        android:id="@+id/Bottom_Right"
+        android:id="@+id/girl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:focusableInTouchMode="false"
+        android:clickable="true" />
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:id="@+id/桌宠"
+        android:clickable="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="false"/>
+<!--        android:layout_margin="15dp"-->
+
+    <ListView
+        android:id="@+id/任务列表"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="120dp" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:background="@mipmap/add_button" />
+
+    <TextView
+        android:id="@+id/顶部日期"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:textSize="19dp" />
+
     <Button
         android:id="@+id/date_button"
-        android:layout_width="8mm"
-        android:layout_height="8mm"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
         android:focusable="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
